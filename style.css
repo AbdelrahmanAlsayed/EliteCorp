@@ -1,0 +1,468 @@
+:root {
+    --main-color :#08526d;
+    --secondary-color: #ed1d24;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    position: relative;
+}
+
+html {
+    scroll-behavior: smooth !important;
+    overflow-x: hidden !important;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+}
+
+::-webkit-scrollbar-track {
+background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+background: #888;
+border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+background-color: #555;
+}    
+
+/* Start the upper bar and the nav bar */
+
+.upper-bar {
+    background-color: var(--main-color);
+    color: #dddddd;
+}
+
+.navbar-brand span:first-child {
+    color: var(--main-color);
+}
+
+.navbar-brand span:last-child {
+    color: var(--secondary-color);
+}
+
+/* - Start the first slider */
+
+.carousel-inner h1 {
+    color: white;
+    z-index: 11;
+    font-size: 50px;
+    max-width: 610px;
+    line-height: 1.4;
+    left: 12%;
+}
+
+.carousel-inner h1 span {
+    background-color: var(--secondary-color);
+}
+
+.redLink {
+    color: var(--secondary-color) !important;
+}
+
+.carousel-item { background-size: cover; }
+
+.carousel-one { background-image: url(images/slider1.jpg); }
+.carousel-two { background-image: url(images/slider02.jpg); }
+.carousel-three { background-image: url(images/slider03.jpg); }
+
+.carousel-inner .overlay,
+#secondary-slider .overlay {
+    top: 0;
+    left: 0;
+    background-color: black;
+    z-index: 10;
+    opacity: .5;
+}
+
+.carousel-indicators li {
+    width: 14px;
+    height: 14px;
+    background-color: transparent;
+    border: 2px solid white;
+    margin: 0 5px;
+    cursor: pointer;
+}
+
+a {
+    z-index: 11;
+}
+
+@media (max-width: 768px) {
+    .carousel-inner h1 {
+        font-size: 40px;
+    }
+}
+@media (max-width: 540px) {
+    .carousel-inner h1 {
+        font-size: 30px;
+    }
+}
+
+/* - Start the Features Section that has 4 icons */
+
+.features .box i {
+    color: white;
+    width: 65px;
+    height: 65px;
+    line-height: 65px;
+    background-color: var(--secondary-color);
+    font-size: 30px;
+    transition: 1s;
+    cursor: pointer;
+}
+
+.box i:hover {
+    color: var(--secondary-color);
+    background-color: #f0f5f7;
+}
+
+.box h3 {
+    color: var(--main-color);
+    font-weight: 500;
+}
+
+.box p, .jumbotron p, .card-body p {
+    line-height: 1.8;
+    color: #989898;
+}
+
+/* Start the Company overview section  */
+
+.overview, .jumbotron {
+    background-color: #f7f7f7;
+}
+
+.jumbotron .paraOverview, h4, .paraOverview {
+    color: #989898;
+}
+
+@media (max-width: 540px) {
+    .jumbotron h2 {
+        font-size: 26px;
+    }
+    .jumbotron .paraOverview, h4, .paraOverview {
+        font-size: 18px;
+    }
+    .jumbotron p a {
+        font-size: 16px;
+        padding: 7px 14px;
+    }
+}
+
+.viewmorebtn {
+    background-color: var(--secondary-color);
+}
+
+.paraOverview h4 {
+    letter-spacing: 2px;
+}
+
+.list-unstyled li .border {
+    color: var(--main-color);
+    border: 2px solid var(--main-color) !important;
+    cursor: pointer;
+    transition: .5s;
+}
+
+.list-unstyled li .active {
+    color: white;
+    border: 2px solid var(--secondary-color) !important;
+    background-color: var(--secondary-color);
+}
+
+.list-unstyled li .border:hover {
+    border: 2px solid var(--secondary-color) !important;
+    color: var(--secondary-color);
+}
+
+.list-unstyled li .active:hover {
+    color: white;
+}
+
+.box-overlay {
+    top: 0;
+    left: 0;
+    z-index: 10;
+    color: white;
+    background-color: rgb(0, 0, 0, .8);
+    opacity: 0;
+    transition: .6s;
+}
+
+.box-overlay:hover {
+    opacity: 1;
+}
+
+.box-overlay h3 {
+    color: var(--secondary-color);
+    font-weight: 500;
+}
+
+.box-overlay h5 {
+    letter-spacing: 1px;
+}
+
+.box-overlay > * {
+    transform: translateY(90px);
+    transition: all .6s;
+}
+
+.box-overlay:hover > * {
+    transform: translateY(0px);
+}
+
+.shuffle-imgs .col-12 {
+    transition: .4s;
+}
+
+@media (max-width: 540px) {
+    .box-overlay h3 {
+        font-size: 20px;
+        padding: 5px;
+    }
+    .box-overlay h5 {
+        font-size: 18px;
+    }       
+}
+
+/* -Start the latest posts section */
+
+.card-body h5 {
+    color: var(--main-color);
+    font-weight: 600;
+}
+
+.card-body a {
+    background-color: var(--secondary-color);
+}
+
+.card-body {
+    background-color: #fcfcfc;
+}
+
+.card, .effect {
+    transition: .5s;
+}
+
+.card:hover , .effect:hover  {
+    transform: translateY(-20px);
+}
+
+/* - Start the secondary slider - the testimonials */
+
+#secondary-slider {
+    background-image: url(images/testimonial-bg.png);
+    background-size: cover;
+}
+
+#secondary-slider .carousel-inner .carousel-item{
+    z-index: 11;
+}
+
+.carousel-caption {
+    top: 52%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+}
+
+.carousel-caption img {
+    width: 95px;
+    height: 95px;
+}
+
+/* - Start the pricing section */
+
+.pricing-table {
+    background-color: #F7F7F7;
+    padding-top: 90px;
+}
+
+.card-body {
+    background-color: white;
+}
+
+.pricing-table .row div:nth-child(2) {
+    transform: translateY(-15px);
+}
+
+.pricing-table .row .card-text {
+    background-color: #f7f7f7;
+    color: var(--main-color);
+}
+
+.pricing-table .row span.special-price,
+.pricing-table .row .card-body button {
+    background-color: var(--secondary-color);
+    color: white;
+}
+
+.list-group-flush li {
+    color: #989898 ;
+}
+
+/* - Start the Why choose us section */
+
+.choose {
+    background-color: var(--main-color);
+    color: white;
+}
+
+@media (max-width: 540px) {
+    .choose .row div h1 {
+        font-size: 30px;
+    }
+}
+
+/* Start the statistics Section*/
+
+.stats .box-container div i,
+.stats .box-container div .number {
+    color: var(--main-color);
+}
+
+.stats .box-container div .text {
+    color: var(--secondary-color);
+}
+
+/* Start the Contact US Section */
+.red-contact {
+    background-color: var(--secondary-color);
+    padding: 80px;
+}
+
+.red-contact div a ,h5 {
+    color: white;
+}
+
+.red-contact .row div a {
+    border: 2px solid white !important;
+    transition: .4s;
+}
+
+.red-contact .row a:hover {
+    background-color: white;
+    color: var(--secondary-color);
+}
+
+@media (max-width: 769px) {
+    .red-contact .row div:first-child {
+        margin-bottom: 20px;
+    }
+}
+
+/* Start the big footer consists of helpful links */
+
+.footer .row div:first-child p {
+    color: #989898;
+    line-height: 2.4;
+}
+
+.footer .row div:first-child .position-relative a {
+    text-decoration: none;
+    color: var(--main-color);
+    transition: .4s;
+}
+
+.footer .row div:first-child .position-relative a::before {
+    position: absolute;
+    font-family: "fontawesome";
+    content: "\f138";
+    left: -18px;
+    top: 0px;
+    font-size: 12px;
+}
+
+.footer .row div:first-child .position-relative a:hover {
+    color: var(--secondary-color);
+}
+
+.footer .row div:nth-child(2) h4,
+.footer .row div:nth-child(3) h4 {
+    color: var(--main-color);
+}
+
+.footer .row div:nth-child(2) .row .col ul li {
+    color: var(--main-color);
+    cursor: pointer;
+    padding: 5px 0;
+    position: relative;
+    transition: .4s;
+    font-size: 15px;
+}
+
+.footer .row div:nth-child(2) .row .col ul li:hover {
+    transform: translateX(5px);
+    color: var(--secondary-color);
+}
+
+.footer .row div:nth-child(2) .row .col ul li::before {
+    position: absolute;
+    font-family: "fontawesome";
+    content: "\f105";
+    left: -15px;
+    top: 5px;
+    font-size: 12px;
+    color: #ccc;
+}
+
+
+.footer .row div:last-child p a {
+    color: var(--main-color);
+    text-decoration: none;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.footer .row div:last-child p a:hover {
+    color: var(--secondary-color);
+}
+
+@media (max-width: 796px) {
+    .footer .row div:nth-child(2) h4,
+    .footer .row div:nth-child(3) h4 {
+        margin-top: 35px;
+    }
+}
+
+/* start the small and last section */
+.last-footer {
+    border-top: 1px solid #bbb7b7;
+    color: #989898;
+}
+
+.last-footer .row p {
+    margin: 0 !important;
+    font-size: 15px;
+}
+
+.last-footer .social-links i {
+    font-size: 20px;
+    cursor: pointer;
+    transition: .4s;
+    padding-left: 15px;
+}
+
+.last-footer .social-links i:hover {
+    color: var(--secondary-color);
+}
+
+@media (max-width: 769px) {
+    .last-footer .row p {
+        margin-bottom: 15px !important;
+        font-size: 14px;
+    }
+}
+/* Abdelrahman Alsayed */
