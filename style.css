@@ -35,7 +35,28 @@ border-radius: 5px;
 
 ::-webkit-scrollbar-thumb:hover {
 background-color: #555;
-}    
+}
+
+.arrow-top {
+    position: fixed;
+    top: 92%;
+    right: 4%;
+    z-index: 999;
+    transition: .4s;
+    color: var(--secondary-color);
+    background-color: transparent;
+    font-size: 35px;
+    cursor: pointer;
+    display: none;
+}
+
+.arrow-top:hover {
+    transform: scale(1.2);
+}
+
+.arrow-top.show {
+    display: block;
+}
 
 /* Start the upper bar and the nav bar */
 

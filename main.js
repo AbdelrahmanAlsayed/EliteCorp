@@ -80,3 +80,22 @@ $(document).ready(function() {
             }, 1000 / goal);
     }
 });
+
+
+// This is for the arrow aimed to Scroll Back To Top
+$(document).ready(function() {
+    let arrowToTop = $(".arrow-top");
+
+    $(window).scroll(function() {
+        if ( $(this).scrollTop() >= 350) {
+            arrowToTop.addClass("show");
+        } 
+        else {
+            arrowToTop.removeClass("show");
+        }
+    });
+    
+    arrowToTop.on("click", function() {
+        $("html, body").scrollTop(0);
+    });
+});
