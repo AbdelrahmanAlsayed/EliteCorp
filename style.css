@@ -6,7 +6,8 @@
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
     position: relative;
 }
 
@@ -42,6 +43,8 @@ background-color: #555;
     top: 92%;
     right: 4%;
     z-index: 999;
+    -webkit-transition: .4s;
+    -o-transition: .4s;
     transition: .4s;
     color: var(--secondary-color);
     background-color: transparent;
@@ -51,7 +54,9 @@ background-color: #555;
 }
 
 .arrow-top:hover {
-    transform: scale(1.2);
+    -webkit-transform: scale(1.2);
+        -ms-transform: scale(1.2);
+            transform: scale(1.2);
 }
 
 .arrow-top.show {
@@ -94,9 +99,9 @@ background-color: #555;
 
 .carousel-item { background-size: cover; }
 
-.carousel-one { background-image: url(images/slider1.jpg); }
-.carousel-two { background-image: url(images/slider02.jpg); }
-.carousel-three { background-image: url(images/slider03.jpg); }
+.carousel-one { background-image: url(images/slider1.webp); }
+.carousel-two { background-image: url(images/slider02.webp); }
+.carousel-three { background-image: url(images/slider03.webp); }
 
 .carousel-inner .overlay,
 #secondary-slider .overlay {
@@ -140,6 +145,8 @@ a {
     line-height: 65px;
     background-color: var(--secondary-color);
     font-size: 30px;
+    -webkit-transition: 1s;
+    -o-transition: 1s;
     transition: 1s;
     cursor: pointer;
 }
@@ -194,6 +201,8 @@ a {
     color: var(--main-color);
     border: 2px solid var(--main-color) !important;
     cursor: pointer;
+    -webkit-transition: .5s;
+    -o-transition: .5s;
     transition: .5s;
 }
 
@@ -219,6 +228,8 @@ a {
     color: white;
     background-color: rgb(0, 0, 0, .8);
     opacity: 0;
+    -webkit-transition: .6s;
+    -o-transition: .6s;
     transition: .6s;
 }
 
@@ -236,15 +247,23 @@ a {
 }
 
 .box-overlay > * {
-    transform: translateY(90px);
+    -webkit-transform: translateY(90px);
+        -ms-transform: translateY(90px);
+            transform: translateY(90px);
+    -webkit-transition: all .6s;
+    -o-transition: all .6s;
     transition: all .6s;
 }
 
 .box-overlay:hover > * {
-    transform: translateY(0px);
+    -webkit-transform: translateY(0px);
+        -ms-transform: translateY(0px);
+            transform: translateY(0px);
 }
 
 .shuffle-imgs .col-12 {
+    -webkit-transition: .4s;
+    -o-transition: .4s;
     transition: .4s;
 }
 
@@ -274,17 +293,21 @@ a {
 }
 
 .card, .effect {
+    -webkit-transition: .5s;
+    -o-transition: .5s;
     transition: .5s;
 }
 
 .card:hover , .effect:hover  {
-    transform: translateY(-20px);
+    -webkit-transform: translateY(-20px);
+        -ms-transform: translateY(-20px);
+            transform: translateY(-20px);
 }
 
 /* - Start the secondary slider - the testimonials */
 
 #secondary-slider {
-    background-image: url(images/testimonial-bg.png);
+    background-image: url(images/testimonial-bg.webp);
     background-size: cover;
 }
 
@@ -295,7 +318,9 @@ a {
 .carousel-caption {
     top: 52%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
     color: #fff;
 }
 
@@ -316,7 +341,9 @@ a {
 }
 
 .pricing-table .row div:nth-child(2) {
-    transform: translateY(-15px);
+    -webkit-transform: translateY(-15px);
+        -ms-transform: translateY(-15px);
+            transform: translateY(-15px);
 }
 
 .pricing-table .row .card-text {
@@ -370,6 +397,8 @@ a {
 
 .red-contact .row div a {
     border: 2px solid white !important;
+    -webkit-transition: .4s;
+    -o-transition: .4s;
     transition: .4s;
 }
 
@@ -394,6 +423,8 @@ a {
 .footer .row div:first-child .position-relative a {
     text-decoration: none;
     color: var(--main-color);
+    -webkit-transition: .4s;
+    -o-transition: .4s;
     transition: .4s;
 }
 
@@ -420,12 +451,16 @@ a {
     cursor: pointer;
     padding: 5px 0;
     position: relative;
+    -webkit-transition: .4s;
+    -o-transition: .4s;
     transition: .4s;
     font-size: 15px;
 }
 
 .footer .row div:nth-child(2) .row .col ul li:hover {
-    transform: translateX(5px);
+    -webkit-transform: translateX(5px);
+        -ms-transform: translateX(5px);
+            transform: translateX(5px);
     color: var(--secondary-color);
 }
 
@@ -444,6 +479,8 @@ a {
     color: var(--main-color);
     text-decoration: none;
     cursor: pointer;
+    -webkit-transition: .3s;
+    -o-transition: .3s;
     transition: .3s;
 }
 
@@ -472,6 +509,8 @@ a {
 .last-footer .social-links i {
     font-size: 20px;
     cursor: pointer;
+    -webkit-transition: .4s;
+    -o-transition: .4s;
     transition: .4s;
     padding-left: 15px;
 }
