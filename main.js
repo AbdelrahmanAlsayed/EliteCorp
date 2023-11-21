@@ -52,7 +52,9 @@ $(document).ready(function () {
             $(this).removeClass("active");
             if ($(this).hasClass("nav-link")) {
                 $(this).removeClass("redLink");
-                $(".actualRed").not(this).addClass("redLink");
+                if (!$(".actualRed").is(":hover")) {
+                    $(".actualRed").addClass("redLink");
+                }
             }
         }
     });
