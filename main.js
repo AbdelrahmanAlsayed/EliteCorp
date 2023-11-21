@@ -15,26 +15,49 @@ $(window).on("resize", function() {
 
 
 // This is for the nav links like home, about, work ... etc.
-$(document).ready(function () {
-    $(".nav-item").on("mouseover", function () {
-        $(this).addClass("active");
-    });
-    $(".nav-link").on("mouseover", function () {
-        $(this).addClass("redLink");
-        $(".actualRed").removeClass("redLink");
-    });
-    $(".actualRed").on("mouseover", function () {
-        $(this).addClass("redLink");
-    });
+// $(document).ready(function () {
+//     $(".nav-item").on("mouseover", function () {
+//         $(this).addClass("active");
+//     });
+//     $(".nav-link").on("mouseover", function () {
+//         $(this).addClass("redLink");
+//         $(".actualRed").removeClass("redLink");
+//     });
+//     $(".actualRed").on("mouseover", function () {
+//         $(this).addClass("redLink");
+//     });
 
-    $(".nav-item").on("mouseleave", function () {
-        $(this).removeClass("active");
+//     $(".nav-item").on("mouseleave", function () {
+//         $(this).removeClass("active");
+//     });
+//     $(".nav-link").on("mouseleave", function () {
+//         $(this).removeClass("redLink");
+//         $(".actualRed").addClass("redLink");
+//     })
+// });
+
+
+$(document).ready(function () {
+    $(".nav-item, .nav-link, .actualRed").on({
+        mouseover: function () {
+            $(this).addClass("active");
+            if ($(this).hasClass("nav-link")) {
+                $(this).addClass("redLink");
+                $(".actualRed").removeClass("redLink");
+            } else if ($(this).hasClass("actualRed")) {
+                $(this).addClass("redLink");
+            }
+        },
+        mouseleave: function () {
+            $(this).removeClass("active");
+            if ($(this).hasClass("nav-link")) {
+                $(this).removeClass("redLink");
+                $(".actualRed").addClass("redLink");
+            }
+        }
     });
-    $(".nav-link").on("mouseleave", function () {
-        $(this).removeClass("redLink");
-        $(".actualRed").addClass("redLink");
-    })
 });
+
 
 
 // This is for shuffle images in the featured work when select specific category
@@ -97,5 +120,6 @@ $(document).ready(function() {
     
     arrowToTop.on("click", function() {
         $("html, body").scrollTop(0);
+        arrowToTop.removeClass("show");
     });
 });
