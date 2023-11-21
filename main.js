@@ -43,7 +43,7 @@ $(document).ready(function () {
             $(this).addClass("active");
             if ($(this).hasClass("nav-link")) {
                 $(this).addClass("redLink");
-                $(".actualRed").removeClass("redLink");
+                $(".actualRed").not(this).removeClass("redLink");
             } else if ($(this).hasClass("actualRed")) {
                 $(this).addClass("redLink");
             }
@@ -52,7 +52,7 @@ $(document).ready(function () {
             $(this).removeClass("active");
             if ($(this).hasClass("nav-link")) {
                 $(this).removeClass("redLink");
-                $(".actualRed").addClass("redLink");
+                $(".actualRed").not(this).addClass("redLink");
             }
         }
     });
